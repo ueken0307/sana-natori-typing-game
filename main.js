@@ -103,9 +103,6 @@ function keyDownHandler(e){
 function main(){
 }
 
-function SceneManager(){
-}
-
 function draw(){
   ctx.clearRect(0,0,canvas.width,canvas.height);
   let p=problems[pCount];
