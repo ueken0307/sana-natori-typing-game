@@ -1,8 +1,3 @@
-var Scene = function(draw,update){
-  this.draw = draw;
-  this.update = update;
-}
-
 var SceneManager = function(scenes){
   this.scenes = scenes;
   this.scene = 0;
