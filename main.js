@@ -26,8 +26,8 @@ var Game = function(param){
     ctx.clearRect(0,0,canvas.width,canvas.height);
     let p=this.problems[this.pCount];
     
-    ctx.font = "48px serif";
-    ctx.fillStyle = 'green';
+    ctx.font = '48px serif';
+    ctx.strokeStyle = 'blue';
     ctx.strokeText(p.text,0,40);
     
     ctx.fillStyle = 'black';
