@@ -103,6 +103,7 @@ var Game = function(param){
 };
 
 var sampleProblems = [
+  {text:'毎年カップル板クリスマスコピペを見てブチ切れていた女の配信',hiragana:'まいとしかっぷるばんくりすますこぴぺをみてぶちぎれていたおんなのはいしん'},
   {text:'待って無理',hiragana:'まってむり'},
   {text:'茶碗蒸し',hiragana:'ちゃわんむし'},
   {text:'名取さなすこすこ',hiragana:'なとりさなすこすこ'},
