@@ -16,3 +16,5 @@ var SceneManager = function(sceneClasses,firstParam){
     this.scene.keyPress(e);
   }
 }
+
+var sm;
