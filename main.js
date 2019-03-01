@@ -1,6 +1,3 @@
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-
 var sampleProblems = [
   {text:'待って無理',hiragana:'まってむり'},
   {text:'茶碗蒸し',hiragana:'ちゃわんむし'},
