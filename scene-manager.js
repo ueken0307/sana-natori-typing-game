@@ -1,17 +1,18 @@
-var SceneManager = function(scenes){
-  this.scenes = scenes;
-  this.scene = 0;
-  this.changeScene = function(target){
-    this.scene = target;
+var SceneManager = function(sceneClasses,firstParam){
+  this.sceneClasses = sceneClasses;
+  this.scene = new sceneClasses[0](firstParam);
+  
+  this.changeScene = function(target,param){
+    this.scene = new sceneClasses[0](param);
   }
   this.draw = function(){
-    this.scenes[this.scene].draw();
+    this.scene.draw();
   }
   this.update = function(){
-    this.scenes[this.scene].update();
+    this.scene.update();
   }
 
   this.keyPress = function(e){
-    this.scenes[this.scene].keyPress(e);
+    this.scene.keyPress(e);
   }
 }
