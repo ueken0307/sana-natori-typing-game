@@ -11,7 +11,7 @@ var SceneManager = function(scenes){
     this.scenes[this.scene].update();
   }
 
-  this.keyPress = function(){
-    this.scenes[this.scene].keyPress();
+  this.keyPress = function(e){
+    this.scenes[this.scene].keyPress(e);
   }
 }
