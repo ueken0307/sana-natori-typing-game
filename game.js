@@ -9,7 +9,7 @@ var Game = function(param){
     canvasReset();
     let p=this.problems[this.pCount];
     
-    ctx.font = '48px serif';
+    ctx.font = '24px serif';
     ctx.strokeStyle = 'blue';
     ctx.strokeText(p.text,0,40);
     
