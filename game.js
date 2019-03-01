@@ -23,10 +23,6 @@ var Game = function(param){
   }
 
   this.keyPress = function(e){
-    if(e.key == 'a'){
-      sm.changeScene(0,{problems:[{text:'うんこ',hiragana:'うんこ'}]})
-    }
-
     let allowList = ['!','?','/','.',',','-','(',')']
     const isAllow = function(key){
       for(let i of allowList){if(i == key){return true;break;}}
