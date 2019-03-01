@@ -6,7 +6,7 @@ var Game = function(param){
   }
 
   this.draw = function(){
-    ctx.clearRect(0,0,canvas.width,canvas.height);
+    canvasReset();
     let p=this.problems[this.pCount];
     
     ctx.font = '48px serif';
