@@ -15,11 +15,11 @@ var sampleProblems = [
 
 var sm;
 
-var Game = function(problems){
+var Game = function(param){
   this.problems = [];
   this.pCount = 0;
-  for(let i=0;i<problems.length;++i){
-    this.problems.push(new Problem(problems[i].text,problems[i].hiragana));
+  for(let i=0;i<param.problems.length;++i){
+    this.problems.push(new Problem(param.problems[i].text,param.problems[i].hiragana));
   }
 
   this.draw = function(){
@@ -120,8 +120,7 @@ var Game = function(problems){
 };
 
 (function init(){
-  var game = new Game(sampleProblems);
-  sm = new SceneManager([game]);
+  sm = new SceneManager([Game],{problems:sampleProblems});
 
   document.addEventListener('keydown',(e)=>sm.keyPress(e));
   setInterval(main,10);
