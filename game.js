@@ -4,19 +4,27 @@ var Game = function(param){
   for(let i=0;i<param.problems.length;++i){
     this.problems.push(new Problem(param.problems[i].text,param.problems[i].hiragana));
   }
+  this.syringe = new Image();
+  this.syringe.src = 'syringe.png';
+  this.natori = new Image();
+  this.natori.src = 'natori.png';
 
   this.draw = function(){
     canvasReset();
     let p=this.problems[this.pCount];
     
+    ctx.drawImage(this.syringe,0,0,1001,101,0,180,1000,100);
+    ctx.drawImage(this.natori,0,0,800,800,700,280,200,200);
+
     ctx.font = '24px serif';
     ctx.textAlign = 'left';
-    ctx.strokeStyle = 'blue';
-    ctx.strokeText(p.text,0,40);
-    
     ctx.fillStyle = 'black';
-    ctx.strokeText(p.getSelectText(),0,80);
-    ctx.fillText(p.getNowText(),0,80);
+    ctx.fillText(p.text,80,220);
+    
+    ctx.fillStyle = 'gray';
+    ctx.fillText(p.getSelectText(),80,260);
+    ctx.fillStyle = 'black';
+    ctx.fillText(p.getNowText(),80,260);
   }
 
   this.update = function(){
