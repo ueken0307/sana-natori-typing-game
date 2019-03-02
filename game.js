@@ -10,6 +10,7 @@ var Game = function(param){
     let p=this.problems[this.pCount];
     
     ctx.font = '24px serif';
+    ctx.textAlign = 'left';
     ctx.strokeStyle = 'blue';
     ctx.strokeText(p.text,0,40);
     
