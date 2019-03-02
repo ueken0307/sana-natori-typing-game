@@ -19,6 +19,10 @@ var SceneManager = function(sceneClasses,firstParam){
   this.click = function(e){
     this.scene.click(e);
   }
+
+  this.mouseMove = function(e){
+    this.scene.mouseMove(e);
+  }
 }
 
 var sm;

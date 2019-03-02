@@ -105,6 +105,12 @@ var Game = function(param){
       console.log(e.offsetX + ',' + e.offsetY);
     }
   }
+
+  this.mouseMove = function(e){
+    if(e.target.id == 'canvas'){
+      //console.log(e.offsetX + ',' + e.offsetY);
+    }
+  }
 };
 
 var sampleProblems = [
