@@ -1,5 +1,5 @@
 (function init(){
-  sm = new SceneManager([Game],{problems:sampleProblems});
+  sm = new SceneManager([Select,Game],{});
 
   document.addEventListener('keydown',(e)=>sm.keyPress(e));
   document.addEventListener('click',(e)=>sm.click(e));
