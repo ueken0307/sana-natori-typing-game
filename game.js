@@ -39,9 +39,7 @@ var Game = function(param){
     }
     
     if((48 <= e.keyCode && e.keyCode <= 57) || (65 <= e.keyCode && e.keyCode <= 90) || (97 <= e.keyCode && e.keyCode <= 122) || isAllow(e.key)){
-      
-      ctx.clearRect(0,0,canvas.width,canvas.height);
-      
+            
       let p = this.problems[this.pCount];
       
       //選択中の文字列であるかどうか
@@ -65,25 +63,20 @@ var Game = function(param){
         p.sCount++;
         p.selectList[p.tCount] = tmpList;
         
-        ctx.font = '24px serif';
-        ctx.fillStyle = 'red';
-        ctx.fillText('OK!',0,120);
-        console.log('ok!');
-        
         //候補の中で、最後まで当てはまったやつがあるならその文字は終わり
         for(let i of tmpList){
           if(p.sCount == p.alphabet[p.tCount][i].length){
             if(p.tCount+1 < p.alphabet.length){
               p.tCount++;
               p.sCount = 0;
-              console.log('end!')
+              //1文字終わり
             }else{
               p.sCount = 0;
-              console.log('end!')
+              //1文字終わり
               
               p.tCount=0;
               this.pCount++;
-              console.log('nextProblem!!');
+              //1文終わり
             }
             break;
           }
@@ -100,10 +93,7 @@ var Game = function(param){
             }
           }
         }else{
-          ctx.font = "24px serif";
-          ctx.fillStyle = 'blue';
-          ctx.fillText('NG!',0,120);
-          console.log('ng!');
+          //当てはまりなし
         }
       }
     }
