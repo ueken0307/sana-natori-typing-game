@@ -100,6 +100,11 @@ var Game = function(param){
     }
   }
 
+  this.click = function(e){
+    if(e.target.id == 'canvas'){
+      console.log(e.offsetX + ',' + e.offsetY);
+    }
+  }
 };
 
 var sampleProblems = [

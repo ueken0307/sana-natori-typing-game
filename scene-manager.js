@@ -15,6 +15,10 @@ var SceneManager = function(sceneClasses,firstParam){
   this.keyPress = function(e){
     this.scene.keyPress(e);
   }
+
+  this.click = function(e){
+    this.scene.click(e);
+  }
 }
 
 var sm;
