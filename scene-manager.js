@@ -3,7 +3,7 @@ var SceneManager = function(sceneClasses,firstParam){
   this.scene = new sceneClasses[0](firstParam);
   
   this.changeScene = function(target,param){
-    this.scene = new sceneClasses[0](param);
+    this.scene = new sceneClasses[target](param);
   }
   this.draw = function(){
     this.scene.draw();
