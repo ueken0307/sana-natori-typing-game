@@ -1,8 +1,14 @@
+var problemList = [
+  sampleProblems,
+  sampleProblems,
+  sampleProblems
+];
+
 var Game = function(param){
   this.problems = [];
   this.pCount = 0;
-  for(let i=0;i<param.problems.length;++i){
-    this.problems.push(new Problem(param.problems[i].text,param.problems[i].hiragana));
+  for(let i=0;i<problemList[param.level].length;++i){
+    this.problems.push(new Problem(problemList[param.level][i].text,problemList[param.level][i].hiragana));
   }
   this.syringe = new Image();
   this.syringe.src = 'syringe.png';
@@ -164,16 +170,3 @@ var Game = function(param){
     }
   }
 };
-
-var sampleProblems = [
-  {text:'毎年カップル板クリスマスコピペを見てブチ切れていた女の配信',hiragana:'まいとしかっぷるいたくりすますこぴぺをみてぶちぎれていたおんなのはいしん'},
-  {text:'待って無理',hiragana:'まってむり'},
-  {text:'茶碗蒸し',hiragana:'ちゃわんむし'},
-  {text:'名取さなすこすこ',hiragana:'なとりさなすこすこ'},
-  {text:'んなに',hiragana:'んなに'},
-  {text:'はい',hiragana:'はい'},
-  {text:'!?(.,/-)',hiragana:'!?(.,/-)'},
-  {text:'1234567890',hiragana:'1234567890'},
-  {text:'abcdefghijklmnopqrstuvwxyz',hiragana:'abcdefghijklmnopqrstuvwxyz'},
-  {text:'ABCDEFGHIJKLMNOPQRSTUVWXYZ',hiragana:'ABCDEFGHIJKLMNOPQRSTUVWXYZ'}
-];

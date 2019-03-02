@@ -4,21 +4,21 @@ var Select = function(param){
     bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white',
     label:'Lv1：幼少時代お絵描きBBS名取さな',
     onClick:function(){
-      sm.changeScene('Game',{problems:sampleProblems});
+      sm.changeScene('Game',{level:0});
     }},
 
     {x:20,y:260,width:500,height:50,font:'24px serif',textAlign:'center',mouseOver:0,
     bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white',
     label:'Lv2：17歳ばーちゃるな〜す名取さな',
     onClick:function(){
-      sm.changeScene('Game',{problems:sampleProblems});
+      sm.changeScene('Game',{level:1});
     }},
 
     {x:20,y:320,width:500,height:50,font:'24px serif',textAlign:'center',mouseOver:0,
     bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white',
     label:'Lv3：インターネット老人会名取さな',
     onClick:function(){
-      sm.changeScene('Game',{problems:sampleProblems});
+      sm.changeScene('Game',{level:2});
     }}
   ];
 
