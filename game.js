@@ -68,13 +68,13 @@ var Game = function(param){
 
       if(this.nowTime < 1){
         this.isActive = false;
-        setTimeout(this.finish,2000); 
+        setTimeout(()=>this.finish(),2000); 
       }
     }
   }
   
   this.finish = function(){
-    sm.changeScene('Result',{});
+    sm.changeScene('Result',{keyCount: this.keyCount,missCount: this.missCount,accuracy: this.accuracy,score: this.score,level:param.level});
   }
 
   this.keyPress = function(e){
