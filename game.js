@@ -68,7 +68,7 @@ var Game = function(param){
   }
   
   this.finish = function(){
-    sm.changeScene(0,{});
+    sm.changeScene('Result',{});
   }
 
   this.keyPress = function(e){

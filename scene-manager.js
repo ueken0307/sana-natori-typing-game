@@ -1,6 +1,6 @@
-var SceneManager = function(sceneClasses,firstParam){
+var SceneManager = function(sceneClasses,firstScene,firstParam){
   this.sceneClasses = sceneClasses;
-  this.scene = new sceneClasses[0](firstParam);
+  this.scene = new sceneClasses[firstScene](firstParam);
   
   this.changeScene = function(target,param){
     this.scene = new sceneClasses[target](param);
