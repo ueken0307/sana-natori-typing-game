@@ -1,4 +1,6 @@
 var Result = function(param){
+  this.finalScore = (param.score * (param.accuracy/100)).toFixed(0);
+
   this.buttons = [
     {x:20,y:200,width:500,height:50,font:'24px serif',textAlign:'center',mouseOver:0,
     bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white',
@@ -17,8 +19,10 @@ var Result = function(param){
     {x:20,y:320,width:500,height:50,font:'24px serif',textAlign:'center',mouseOver:0,
     bColor:'DodgerBlue',fColor:'white',bOverColor:'DeepSkyBlue',fOverColor:'white',
     label:'結果をツイート',
-    onClick:function(){
-      
+    onClick:()=>{
+      let url = "https://www.google.com";
+      let text = `${param.level} ${this.finalScore} (${param.accuracy.toFixed(1)}％) #test`;
+      window.open(`https://twitter.com/share?url=${url}&text=${text}`);
     }}
   ];
 
@@ -32,7 +36,7 @@ var Result = function(param){
     '%(' + (param.keyCount - param.missCount) + '/' +  param.keyCount + ')' ,10,50);
     ctx.font = '50px serif';
     ctx.fillStyle = 'red';
-    ctx.fillText((param.score * (param.accuracy/100)).toFixed(0),0,100);
+    ctx.fillText(this.finalScore,0,100);
     
     for(let i of this.buttons){
       ctx.font = i.font;
