@@ -5,6 +5,22 @@ var problemList = [
 ];
 
 var Game = function(param){
+  this.buttons = [
+    {x:20,y:380,width:300,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
+    bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white',
+    label:'タイトルへ戻る',
+    onClick:function(){
+      sm.changeScene('Select',{isStart:true});
+    }},
+
+    {x:330,y:380,width:300,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
+    bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white',
+    label:'やり直す',
+    onClick:function(){
+      sm.changeScene('Game',{level:param.level});
+    }},
+  ];
+
   this.problems = [];
   this.pCount = 0;
   for(let i=0;i<problemList[param.level].length;++i){
@@ -59,7 +75,15 @@ var Game = function(param){
       }
     }
 
-    
+    for(let i of this.buttons){
+      ctx.font = i.font;
+      ctx.textAlign = i.textAlign;
+
+      ctx.fillStyle = (i.mouseOver == 1)? i.bOverColor: i.bColor;
+      ctx.fillRect(i.x,i.y,i.width,i.height);
+      ctx.fillStyle = (i.mouseOver == 1)? i.fOverColor: i.fColor;
+      ctx.fillText(i.label,i.x+i.width/2,i.y+i.height/2 + 10);
+    }
   }
 
   this.update = function(){
@@ -165,13 +189,27 @@ var Game = function(param){
 
   this.click = function(e){
     if(e.target.id == 'canvas'){
-      //console.log(e.offsetX + ',' + e.offsetY);
+      for(let i of this.buttons){
+        if((i.x <= e.offsetX && e.offsetX <= i.x + i.width) && (i.y <= e.offsetY && e.offsetY <= i.y + i.height)){
+          playSE(decideSound);
+          i.onClick();
+        }
+      }
     }
   }
 
   this.mouseMove = function(e){
     if(e.target.id == 'canvas'){
-      //console.log(e.offsetX + ',' + e.offsetY);
+      for(let i of this.buttons){
+        if((i.x <= e.offsetX && e.offsetX <= i.x + i.width) && (i.y <= e.offsetY && e.offsetY <= i.y + i.height)){
+          if(i.mouseOver == 0){
+            playSE(overSound);
+          }
+          i.mouseOver = 1;
+        }else{
+          i.mouseOver = 0;
+        }
+      }
     }
   }
 };
