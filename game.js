@@ -11,9 +11,9 @@ var Game = function(param){
     this.problems.push(new Problem(problemList[param.level][i].text,problemList[param.level][i].hiragana));
   }
   this.syringe = new Image();
-  this.syringe.src = 'syringe.png';
+  this.syringe.src = 'assets/syringe.png';
   this.natori = new Image();
-  this.natori.src = 'natori.png';
+  this.natori.src = 'assets/natori.png';
 
   this.isActive = false;
   this.nowTime = 90;
