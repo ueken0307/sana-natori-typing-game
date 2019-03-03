@@ -164,6 +164,9 @@ var Game = function(param){
                 p.tCount=0;
                 this.score+=p.textH.length*100;
                 this.pCount++;
+                if(this.pCount >= this.problems.length){
+                  this.finish();
+                }
                 //1文終わり
               }
               break;
