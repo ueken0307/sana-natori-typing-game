@@ -2,21 +2,21 @@ var Result = function(param){
   this.finalScore = (param.score * (param.accuracy/100)).toFixed(0);
 
   this.buttons = [
-    {x:20,y:200,width:500,height:50,font:'24px serif',textAlign:'center',mouseOver:0,
+    {x:20,y:200,width:500,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
     bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white',
     label:'タイトルへ',
     onClick:function(){
       sm.changeScene('Select',{});
     }},
 
-    {x:20,y:260,width:500,height:50,font:'24px serif',textAlign:'center',mouseOver:0,
+    {x:20,y:260,width:500,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
     bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white',
     label:'もう一度',
     onClick:function(){
       sm.changeScene('Game',{level:param.level});
     }},
 
-    {x:20,y:320,width:500,height:50,font:'24px serif',textAlign:'center',mouseOver:0,
+    {x:20,y:320,width:500,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
     bColor:'DodgerBlue',fColor:'white',bOverColor:'DeepSkyBlue',fOverColor:'white',
     label:'結果をツイート',
     onClick:()=>{
@@ -29,12 +29,12 @@ var Result = function(param){
   this.draw = function(){
     canvasReset();
 
-    ctx.font = '30px serif';
+    ctx.font = '30px JKfont';
     ctx.textAlign = 'left';
     ctx.fillStyle = 'black';
     ctx.fillText('基本スコア:' + param.score +  ' × 正確さ:' + param.accuracy.toFixed(1) + 
     '%(' + (param.keyCount - param.missCount) + '/' +  param.keyCount + ')' ,10,50);
-    ctx.font = '50px serif';
+    ctx.font = '50px JKfont';
     ctx.fillStyle = 'red';
     ctx.fillText(this.finalScore,0,100);
     

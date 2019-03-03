@@ -30,7 +30,7 @@ var Game = function(param){
     ctx.drawImage(this.syringe,0,0,1001,101,0,180,1000,100);
     ctx.drawImage(this.natori,0,0,800,800,700,280,200,200);
 
-    ctx.font = '35px serif';
+    ctx.font = '35px JKfont';
     ctx.textAlign = 'center';
     ctx.fillStyle = 'black'
     ctx.fillText(this.nowTime,900,50);
@@ -38,7 +38,7 @@ var Game = function(param){
     ctx.fillText(this.score,600,50);
     ctx.fillText(this.accuracy.toFixed(1) + '%',700,50);
 
-    ctx.font = '24px serif';
+    ctx.font = '24px JKfont';
     ctx.textAlign = 'left';
     if(this.isActive){  
       ctx.fillStyle = 'black';

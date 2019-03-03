@@ -1,34 +1,34 @@
 var Select = function(param){
   this.buttons = [
-    {x:20,y:200,width:500,height:50,font:'24px serif',textAlign:'center',mouseOver:0,
+    {x:20,y:200,width:500,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
     bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white',
     label:'Lv1：幼少時代お絵描きBBS名取さな',
     onClick:function(){
       sm.changeScene('Game',{level:0});
     }},
 
-    {x:20,y:260,width:500,height:50,font:'24px serif',textAlign:'center',mouseOver:0,
+    {x:20,y:260,width:500,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
     bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white',
     label:'Lv2：17歳ばーちゃるな〜す名取さな',
     onClick:function(){
       sm.changeScene('Game',{level:1});
     }},
 
-    {x:20,y:320,width:500,height:50,font:'24px serif',textAlign:'center',mouseOver:0,
+    {x:20,y:320,width:500,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
     bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white',
     label:'Lv3：インターネット老人会名取さな',
     onClick:function(){
       sm.changeScene('Game',{level:2});
     }},
 
-    {x:600,y:400,width:50,height:20,font:'14px serif',textAlign:'center',mouseOver:0,
+    {x:600,y:400,width:50,height:20,font:'14px JKfont',textAlign:'center',mouseOver:0,
     bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white',
     label:'BGM再生',
     onClick:function(){
       bgm.play();
     }},
 
-    {x:660,y:400,width:50,height:20,font:'14px serif',textAlign:'center',mouseOver:0,
+    {x:660,y:400,width:50,height:20,font:'14px JKfont',textAlign:'center',mouseOver:0,
     bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white',
     label:'BGM停止',
     onClick:function(){
