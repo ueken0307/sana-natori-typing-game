@@ -36,6 +36,16 @@ var Select = function(param){
     }}
   ];
 
+  this.isStart = false;
+  this.startButton = {
+  x:20,y:320,width:500,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
+  bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white',
+  label:'げーむすたーと',
+  onClick:()=>{
+    bgm.play();
+    this.isStart = true;
+  }};
+
   this.draw = function(){
     canvasReset();
 
@@ -51,15 +61,25 @@ var Select = function(param){
     ctx.font = '30px JKfont';
     ctx.fillText('なんいど',20,240);
     
-    
-    for(let i of this.buttons){
-      ctx.font = i.font;
-      ctx.textAlign = i.textAlign;
+    if(this.isStart){
+      for(let i of this.buttons){
+        ctx.font = i.font;
+        ctx.textAlign = i.textAlign;
+  
+        ctx.fillStyle = (i.mouseOver == 1)? i.bOverColor: i.bColor;
+        ctx.fillRect(i.x,i.y,i.width,i.height);
+        ctx.fillStyle = (i.mouseOver == 1)? i.fOverColor: i.fColor;
+        ctx.fillText(i.label,i.x+i.width/2,i.y+i.height/2 + 10);
+      }
+    }else{
+      let tmp = this.startButton;
+      ctx.font = tmp.font;
+      ctx.textAlign = tmp.textAlign;
 
-      ctx.fillStyle = (i.mouseOver == 1)? i.bOverColor: i.bColor;
-      ctx.fillRect(i.x,i.y,i.width,i.height);
-      ctx.fillStyle = (i.mouseOver == 1)? i.fOverColor: i.fColor;
-      ctx.fillText(i.label,i.x+i.width/2,i.y+i.height/2 + 10);
+      ctx.fillStyle = (tmp.mouseOver == 1)? tmp.bOverColor: tmp.bColor;
+      ctx.fillRect(tmp.x,tmp.y,tmp.width,tmp.height);
+      ctx.fillStyle = (tmp.mouseOver == 1)? tmp.fOverColor: tmp.fColor;
+      ctx.fillText(tmp.label,tmp.x+tmp.width/2,tmp.y+tmp.height/2 + 10);
     }
   }
 
@@ -73,10 +93,18 @@ var Select = function(param){
 
   this.click = function(e){
     if(e.target.id == 'canvas'){
-      for(let i of this.buttons){
-        if((i.x <= e.offsetX && e.offsetX <= i.x + i.width) && (i.y <= e.offsetY && e.offsetY <= i.y + i.height)){
+      if(this.isStart){
+        for(let i of this.buttons){
+          if((i.x <= e.offsetX && e.offsetX <= i.x + i.width) && (i.y <= e.offsetY && e.offsetY <= i.y + i.height)){
+            playSE(decideSound);
+            i.onClick();
+          }
+        }
+      }else{
+        let tmp = this.startButton;
+        if((tmp.x <= e.offsetX && e.offsetX <= tmp.x + tmp.width) && (tmp.y <= e.offsetY && e.offsetY <= tmp.y + tmp.height)){
           playSE(decideSound);
-          i.onClick();
+          tmp.onClick();
         }
       }
     }
@@ -84,16 +112,26 @@ var Select = function(param){
 
   this.mouseMove = function(e){
     if(e.target.id == 'canvas'){
-      for(let i of this.buttons){
-        if((i.x <= e.offsetX && e.offsetX <= i.x + i.width) && (i.y <= e.offsetY && e.offsetY <= i.y + i.height)){
-          if(i.mouseOver == 0){
-            playSE(overSound);
+      if(this.isStart){
+        for(let i of this.buttons){
+          if((i.x <= e.offsetX && e.offsetX <= i.x + i.width) && (i.y <= e.offsetY && e.offsetY <= i.y + i.height)){
+            if(i.mouseOver == 0){
+              playSE(overSound);
+            }
+            i.mouseOver = 1;
+          }else{
+            i.mouseOver = 0;
           }
-          i.mouseOver = 1;
+        }
+      }else{
+        let tmp=this.startButton;
+        if((tmp.x <= e.offsetX && e.offsetX <= tmp.x + tmp.width) && (tmp.y <= e.offsetY && e.offsetY <= tmp.y + tmp.height)){
+          tmp.mouseOver = 1;
         }else{
-          i.mouseOver = 0;
+          tmp.mouseOver = 0;
         }
       }
+      
     }
   }
 }
