@@ -40,7 +40,7 @@ var Result = function(param){
     '%(' + (param.keyCount - param.missCount) + '/' +  param.keyCount + ')',20,100);
     ctx.fillText('スピード : ' + this.speed + 'key/s',20,150);
 
-    ctx.fillText('最終スコア : ' + param.score + ' × ' + param.accuracy + '%',20,200);
+    ctx.fillText('最終スコア : ' + param.score + ' × ' + param.accuracy.toFixed(1) + '%',20,200);
     ctx.fillText('=',310,240);
     ctx.font = '50px JKfont';
     ctx.fillStyle = 'red';
@@ -69,6 +69,7 @@ var Result = function(param){
     if(e.target.id == 'canvas'){
       for(let i of this.buttons){
         if((i.x <= e.offsetX && e.offsetX <= i.x + i.width) && (i.y <= e.offsetY && e.offsetY <= i.y + i.height)){
+          playSE(decideSound);
           i.onClick();
         }
       }
@@ -79,6 +80,9 @@ var Result = function(param){
     if(e.target.id == 'canvas'){
       for(let i of this.buttons){
         if((i.x <= e.offsetX && e.offsetX <= i.x + i.width) && (i.y <= e.offsetY && e.offsetY <= i.y + i.height)){
+          if(i.mouseOver == 0){
+            playSE(overSound);
+          }
           i.mouseOver = 1;
         }else{
           i.mouseOver = 0;
