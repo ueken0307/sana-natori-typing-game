@@ -36,7 +36,7 @@ var Select = function(param){
     }}
   ];
 
-  this.isStart = false;
+  this.isStart = param.isStart;
   this.startButton = {
   x:20,y:320,width:500,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
   bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white',

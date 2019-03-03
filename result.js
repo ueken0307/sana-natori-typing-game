@@ -7,7 +7,7 @@ var Result = function(param){
     bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white',
     label:'タイトルへ',
     onClick:function(){
-      sm.changeScene('Select',{});
+      sm.changeScene('Select',{isStart:true});
     }},
 
     {x:20,y:360,width:500,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
