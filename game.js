@@ -23,8 +23,19 @@ var Game = function(param){
 
   this.problems = [];
   this.pCount = 0;
-  for(let i=0;i<problemList[param.level].length;++i){
-    this.problems.push(new Problem(problemList[param.level][i].text,problemList[param.level][i].hiragana));
+  
+  //問題のコピー
+  let tmpProblem = problemList[param.level].slice();
+  //問題のシャッフル
+  for(let i=tmpProblem.length-1;i>0;--i){
+    let r = Math.floor(Math.random()*(i+1));
+    let tmp = tmpProblem[i];
+    tmpProblem[i] = tmpProblem[r];
+    tmpProblem[r] = tmp; 
+  }
+  //問題の代入
+  for(let i=0;i<tmpProblem.length;++i){
+    this.problems.push(new Problem(tmpProblem[i].text,tmpProblem[i].hiragana));
   }
 
   this.isActive = false;
