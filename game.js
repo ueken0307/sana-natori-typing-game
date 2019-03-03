@@ -112,6 +112,8 @@ var Game = function(param){
           p.sCount++;
           p.selectList[p.tCount] = tmpList;
           
+          playSE(okSound);
+
           //候補の中で、最後まで当てはまったやつがあるならその文字は終わり
           for(let i of tmpList){
             if(p.sCount == p.alphabet[p.tCount][i].length){
@@ -146,6 +148,8 @@ var Game = function(param){
             //当てはまりなし
             this.missCount++;
             this.accuracy = ((this.keyCount - this.missCount)/this.keyCount)*100;
+
+            playSE(ngSound);
           }
         }
       }
