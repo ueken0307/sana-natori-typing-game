@@ -58,10 +58,10 @@ var Select = function(param){
     ctx.fillText('つよつよ',100,120);
     ctx.fillText('タイピング',200,180);
 
-    ctx.font = '30px JKfont';
-    ctx.fillText('なんいど',20,240);
-    
     if(this.isStart){
+      ctx.font = '30px JKfont';
+      ctx.fillText('なんいど',20,240);
+
       for(let i of this.buttons){
         ctx.font = i.font;
         ctx.textAlign = i.textAlign;
