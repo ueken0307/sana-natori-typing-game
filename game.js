@@ -10,10 +10,6 @@ var Game = function(param){
   for(let i=0;i<problemList[param.level].length;++i){
     this.problems.push(new Problem(problemList[param.level][i].text,problemList[param.level][i].hiragana));
   }
-  this.syringe = new Image();
-  this.syringe.src = 'assets/syringe.png';
-  this.natori = new Image();
-  this.natori.src = 'assets/natori.png';
 
   this.isActive = false;
   this.nowTime = 90;
@@ -27,34 +23,39 @@ var Game = function(param){
     canvasReset();
     let p=this.problems[this.pCount];
     
-    ctx.drawImage(this.syringe,0,0,1001,101,0,180,1000,100);
-    ctx.drawImage(this.natori,0,0,800,800,700,280,200,200);
-
-    ctx.font = '35px JKfont';
-    ctx.textAlign = 'center';
+    ctx.drawImage(syringe,0,0,syringe.width,syringe.height,2,120,996,100);
+    ctx.drawImage(natori,0,0,natori.width,natori.height,700,280,200,200);
+    
+    ctx.font = '40px JKfont';
+    ctx.textAlign = 'left';
     ctx.fillStyle = 'black'
-    ctx.fillText(this.nowTime,900,50);
 
-    ctx.fillText(this.score,600,50);
-    ctx.fillText(this.accuracy.toFixed(1) + '%',700,50);
+    ctx.drawImage(eggplant,0,0,eggplant.width,eggplant.height,150,10,50,50);
+    ctx.fillText(this.score,210,50);
+
+    ctx.drawImage(keyboard,0,0,keyboard.width,keyboard.height,450,10,50,50);
+    ctx.fillText(this.accuracy.toFixed(1) + '%',510,50);
+
+    ctx.drawImage(clock,0,0,clock.width,clock.height,750,10,50,50);
+    ctx.fillText(this.nowTime,810,50);
 
     ctx.font = '24px JKfont';
     ctx.textAlign = 'left';
     if(this.isActive){  
       ctx.fillStyle = 'black';
-      ctx.fillText(p.text,80,220);
+      ctx.fillText(p.text,80,160);
       
       ctx.fillStyle = 'gray';
-      ctx.fillText(p.getSelectText(),80,260);
+      ctx.fillText(p.getSelectText(),80,200);
       ctx.fillStyle = 'black';
-      ctx.fillText(p.getNowText(),80,260); 
+      ctx.fillText(p.getNowText(),80,200); 
     }else{
       ctx.fillStyle = 'red';
       ctx.textAlign = 'center';
       if(this.nowTime > 0){
-        ctx.fillText('スペースキーでスタート',500,240);
+        ctx.fillText('スペースキーでスタート',500,180);
       }else{
-        ctx.fillText('おつかれさな〜',500,240);
+        ctx.fillText('おつかれさなー',500,180);
       }
     }
 
