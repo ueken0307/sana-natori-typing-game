@@ -1,7 +1,7 @@
 var About = function(param){
   this.buttons = [
     {x:400,y:420,width:200,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
-    bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white',
+    bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white', labelOffset:10,
     label:'タイトルへ戻る',
     onClick:function(){
       sm.changeScene('Select',{isStart:true});
@@ -39,9 +39,9 @@ var About = function(param){
       ctx.textAlign = i.textAlign;
 
       ctx.fillStyle = (i.mouseOver == 1)? i.bOverColor: i.bColor;
-      ctx.fillRect(i.x,i.y,i.width,i.height);
+      cornerRadiusRect(i.x,i.y,i.width,i.height);
       ctx.fillStyle = (i.mouseOver == 1)? i.fOverColor: i.fColor;
-      ctx.fillText(i.label,i.x+i.width/2,i.y+i.height/2 + 10);
+      ctx.fillText(i.label,i.x+i.width/2,i.y+i.height/2 + i.labelOffset);
     }
   }
 
