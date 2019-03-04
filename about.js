@@ -32,9 +32,6 @@ var About = function(param){
     ctx.fillText('Contact',10,360);
     ctx.font = '20px JKfont';
     ctx.fillText('何かあれば、Twitter : @zuho_cpp まで連絡お願いします。',20,390);
-    //ctx.fillText('名取さな1周年記念サイト用のゲームとして作成しました。',20,110);
-    //ctx.fillText('このゲームは同人ゲームであり、名取さな氏との直接な関係はありません。もちろん非公式です。',20,140);
-
     
     for(let i of this.buttons){
       ctx.font = i.font;
