@@ -33,6 +33,13 @@ var Select = function(param){
     label:'BGM停止',
     onClick:function(){
       bgm.pause();
+    }},
+
+    {x:200,y:440,width:70,height:30,font:'14px JKfont',textAlign:'center',mouseOver:0,
+    bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white',
+    label:'アバウト',
+    onClick:function(){
+      sm.changeScene('About',{});
     }}
   ];
 
