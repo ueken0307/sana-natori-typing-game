@@ -21,7 +21,7 @@ var Result = function(param){
     bColor:'DodgerBlue',fColor:'white',bOverColor:'DeepSkyBlue',fOverColor:'white',
     label:'結果をツイート',
     onClick:()=>{
-      let url = "https://www.google.com";
+      let url = "https://1st.natorisana.love/";
       let text = `レベル${param.level+1}で${this.finalScore}点獲得！！ (正確率:${param.accuracy.toFixed(1)}％, 速さ:${this.speed}key/s)`;
       window.open(`https://twitter.com/share?url=${url}&text=${text}&hashtags=名取さなのつよつよタイピング`);
     }}
