@@ -1,7 +1,7 @@
 var problemList = [
-  sampleProblems,
-  sampleProblems,
-  sampleProblems
+  level1,
+  level2,
+  level3
 ];
 
 var Game = function(param){
