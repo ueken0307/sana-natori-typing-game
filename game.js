@@ -115,7 +115,7 @@ var Game = function(param){
 
   this.keyPress = function(e){
     if(this.isActive){ 
-      let allowList = ['!','?','/','.',',','-','(',')','~',"'",'"',' '];
+      let allowList = ['!','?','/','.',',','-','(',')','~',"'",'"',' ','&'];
       const isAllow = function(key){
         for(let i of allowList){if(i == key){return true;break;}}
         return false;
