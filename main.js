@@ -1,5 +1,5 @@
 (function init(){
-  sm = new SceneManager({'Select':Select,'Game':Game,'Result':Result,'About':About},
+  sm = new SceneManager({'Select':Select,'Game':Game,'Result':Result,'About':About,'Licence':Licence},
   'Select',{isStart:false});
 
   document.addEventListener('keydown',(e)=>sm.keyPress(e));

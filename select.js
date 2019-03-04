@@ -40,6 +40,13 @@ var Select = function(param){
     label:'アバウト',
     onClick:function(){
       sm.changeScene('About',{});
+    }},
+
+    {x:290,y:440,width:70,height:30,font:'14px JKfont',textAlign:'center',mouseOver:0,
+    bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white',
+    label:'ライセンス',
+    onClick:function(){
+      sm.changeScene('Licence',{});
     }}
   ];
 
