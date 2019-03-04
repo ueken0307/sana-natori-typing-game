@@ -17,21 +17,22 @@ var About = function(param){
     ctx.font = '40px JKfont';
     ctx.fillText('About',10,40);
     ctx.font = '20px JKfont';
-    ctx.fillText('このゲームは名取さな氏の生放送,動画,ツイートなどを問題にしたタイピングゲームです。',20,80);
-    ctx.fillText('名取さな1周年記念サイト用のゲームとして作成しました。',20,110);
-    ctx.fillText('このゲームは同人ゲームであり、名取さな氏との直接な関係はありません。もちろん非公式です。',20,140);
+    ctx.fillText('このゲームは名取さな氏の生放送,動画,ツイートなどを問題にしたタイピングゲームです。',20,70);
+    ctx.fillText('名取さな1周年記念サイト用のゲームとして作成しました。',20,100);
+    ctx.fillText('このゲームは同人ゲームであり、名取さな氏との直接な関係はありません。もちろん非公式です。',20,130);
 
     ctx.font = '40px JKfont';
-    ctx.fillText('How to play',10,200);
+    ctx.fillText('How to play',10,190);
     ctx.font = '20px JKfont';
-    ctx.fillText('画面上に表示される文章を時間内にどれだけ入力できるかに挑戦します。',20,240);
-    ctx.fillText('難易度は3段階で、難易度が上がるごとに1つの文章の文字数が増えます。',20,270);
-    ctx.fillText('スコアは (最後まで入力した文章のひらがなでの文字数 × 100) × 正確率 で算出されます。',20,300);
+    ctx.fillText('画面上に表示される文章を時間内にどれだけ入力できるかに挑戦します。',20,220);
+    ctx.fillText('難易度は3段階で、難易度が上がるごとに1つの文章の文字数が増えます。',20,250);
+    ctx.fillText('画面上に表示されている入力方法以外でも入力できます(例:「きゃ」は kya kixya kilya のいずれも可)',20,280);
+    ctx.fillText('スコアは (最後まで入力した文章のひらがなでの文字数 × 100) × 正確率 で算出されます。',20,310);
 
     ctx.font = '40px JKfont';
-    ctx.fillText('Contact',10,360);
+    ctx.fillText('Contact',10,370);
     ctx.font = '20px JKfont';
-    ctx.fillText('何かあれば、Twitter : @zuho_cpp まで連絡お願いします。',20,390);
+    ctx.fillText('何かあれば、Twitter : @zuho_cpp まで連絡お願いします。',20,400);
     
     for(let i of this.buttons){
       ctx.font = i.font;
