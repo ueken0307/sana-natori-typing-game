@@ -53,7 +53,7 @@ var Result = function(param){
       ctx.textAlign = i.textAlign;
 
       ctx.fillStyle = (i.mouseOver == 1)? i.bOverColor: i.bColor;
-      ctx.fillRect(i.x,i.y,i.width,i.height);
+      cornerRadiusRect(i.x,i.y,i.width,i.height);
       ctx.fillStyle = (i.mouseOver == 1)? i.fOverColor: i.fColor;
       ctx.fillText(i.label,i.x+i.width/2,i.y+i.height/2 + 10);
     }

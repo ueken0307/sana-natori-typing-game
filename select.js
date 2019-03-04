@@ -81,7 +81,7 @@ var Select = function(param){
         ctx.textAlign = i.textAlign;
   
         ctx.fillStyle = (i.mouseOver == 1)? i.bOverColor: i.bColor;
-        ctx.fillRect(i.x,i.y,i.width,i.height);
+        cornerRadiusRect(i.x,i.y,i.width,i.height);
         ctx.fillStyle = (i.mouseOver == 1)? i.fOverColor: i.fColor;
         ctx.fillText(i.label,i.x+i.width/2,i.y+i.height/2 + 10);
       }
@@ -91,7 +91,7 @@ var Select = function(param){
       ctx.textAlign = tmp.textAlign;
 
       ctx.fillStyle = (tmp.mouseOver == 1)? tmp.bOverColor: tmp.bColor;
-      ctx.fillRect(tmp.x,tmp.y,tmp.width,tmp.height);
+      cornerRadiusRect(tmp.x,tmp.y,tmp.width,tmp.height);
       ctx.fillStyle = (tmp.mouseOver == 1)? tmp.fOverColor: tmp.fColor;
       ctx.fillText(tmp.label,tmp.x+tmp.width/2,tmp.y+tmp.height/2 + 10);
     }
