@@ -7,14 +7,14 @@ var problemList = [
 var Game = function(param){
   this.buttons = [
     {x:20,y:380,width:300,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
-    bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white',
+    bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white', labelOffset:10,
     label:'タイトルへ戻る',
     onClick:function(){
       sm.changeScene('Select',{isStart:true});
     }},
 
     {x:330,y:380,width:300,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
-    bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white',
+    bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white', labelOffset:10,
     label:'やり直す',
     onClick:function(){
       sm.changeScene('Game',{level:param.level});
@@ -93,7 +93,7 @@ var Game = function(param){
       ctx.fillStyle = (i.mouseOver == 1)? i.bOverColor: i.bColor;
       cornerRadiusRect(i.x,i.y,i.width,i.height);
       ctx.fillStyle = (i.mouseOver == 1)? i.fOverColor: i.fColor;
-      ctx.fillText(i.label,i.x+i.width/2,i.y+i.height/2 + 10);
+      ctx.fillText(i.label,i.x+i.width/2,i.y+i.height/2 + i.labelOffset);
     }
   }
 

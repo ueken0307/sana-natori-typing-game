@@ -6,21 +6,21 @@ var Result = function(param){
 
   this.buttons = [
     {x:20,y:300,width:500,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
-    bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white',
+    bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white', labelOffset:10,
     label:'タイトルへ',
     onClick:function(){
       sm.changeScene('Select',{isStart:true});
     }},
 
     {x:20,y:360,width:500,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
-    bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white',
+    bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white', labelOffset:10,
     label:'もう一度',
     onClick:function(){
       sm.changeScene('Game',{level:param.level});
     }},
 
     {x:20,y:420,width:500,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
-    bColor:'DodgerBlue',fColor:'white',bOverColor:'DeepSkyBlue',fOverColor:'white',
+    bColor:'DodgerBlue',fColor:'white',bOverColor:'DeepSkyBlue',fOverColor:'white', labelOffset:10,
     label:'結果をツイート',
     onClick:()=>{
       let url = "https://1st.natorisana.love/";
@@ -55,7 +55,7 @@ var Result = function(param){
       ctx.fillStyle = (i.mouseOver == 1)? i.bOverColor: i.bColor;
       cornerRadiusRect(i.x,i.y,i.width,i.height);
       ctx.fillStyle = (i.mouseOver == 1)? i.fOverColor: i.fColor;
-      ctx.fillText(i.label,i.x+i.width/2,i.y+i.height/2 + 10);
+      ctx.fillText(i.label,i.x+i.width/2,i.y+i.height/2 + i.labelOffset);
     }
   }
 
