@@ -90,11 +90,6 @@ var allProblems = [
     description: ''
   },
   {
-    text: 'やだ...ばかぁ',
-    hiragana: 'やだ...ばかぁ',
-    description: ''
-  },
-  {
     text: 'サーナ君',
     hiragana: 'さーなくん',
     description: ''
@@ -171,7 +166,7 @@ var allProblems = [
   },
   {
     text: 'やっぴ～！',
-    hiragana: 'やっぴ~!',
+    hiragana: 'やっぴ〜!',
     description: ''
   },
   {
@@ -235,8 +230,8 @@ var allProblems = [
     description: ''
   },
   {
-    text: 'ねぇ～～～',
-    hiragana: 'ねぇ～～～',
+    text: 'ねぇ～～',
+    hiragana: 'ねぇ～～',
     description: ''
   },
   {
@@ -345,8 +340,8 @@ var allProblems = [
     description: ''
   },
   {
-    text: '名取と七夕ばーべきゅー！～”陽”の者になろうな！～',
-    hiragana: 'なとりとたなばたばーべきゅー！～"よう"のものになろうな！～',
+    text: '名取と七夕ばーべきゅー！～陽の者になろうな！～',
+    hiragana: 'なとりとたなばたばーべきゅー！～ようのものになろうな！～',
     description: ''
   },
   {
@@ -440,7 +435,7 @@ var allProblems = [
     description: ''
   },
   {
-    text: '♡たのしいハロウィンだナース♡',
+    text: 'たのしいハロウィンだナース',
     hiragana: 'たのしいはろうぃんだなーす',
     description: ''
   },
@@ -506,7 +501,7 @@ var allProblems = [
   },
   {
     text: 'Vもすなるマイクラといふものを、名取もしてみむとてするなり',
-    hiragana: 'Vもなするまいくらというふものを、なとりもしてみむとてするなり',
+    hiragana: 'Vもすなるまいくらといふものを、なとりもしてみむとてするなり',
     description: ''
   },
   {
