@@ -105,6 +105,7 @@ var Game = function(param){
       if(this.nowTime < 1){
         this.isActive = false;
         setTimeout(()=>this.finish(),2000); 
+        playSERandom(finishSounds);
       }
     }
   }
@@ -197,6 +198,7 @@ var Game = function(param){
         this.isActive = true;
         let date = new Date();
         this.startTime = date.getTime();
+        playSERandom(startSounds);
       }
     }
   }

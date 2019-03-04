@@ -1,4 +1,6 @@
 var Result = function(param){
+  playSERandom(resultSounds);
+
   this.finalScore = (param.score * (param.accuracy/100)).toFixed(0);
   this.speed = ((param.keyCount - param.missCount)/90.0).toFixed(1);
 
