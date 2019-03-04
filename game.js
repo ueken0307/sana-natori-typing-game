@@ -65,18 +65,23 @@ var Game = function(param){
 
     ctx.drawImage(clock,0,0,clock.width,clock.height,750,10,50,50);
     ctx.fillText(this.nowTime,810,50);
-
-    ctx.font = '24px JKfont';
-    ctx.textAlign = 'left';
-    if(this.isActive){  
+    
+    if(this.isActive){
+      ctx.textAlign = 'left';  
+      
+      ctx.font = '24px JKfont';
+      ctx.font = (ctx.measureText(p.text).width > 800)? '18px JKfont':'24px JKfont';
       ctx.fillStyle = 'black';
       ctx.fillText(p.text,80,160);
       
+      ctx.font = '24px JKfont';
+      ctx.font = (ctx.measureText(p.getSelectText()).width > 800)? '18px JKfont':'24px JKfont';
       ctx.fillStyle = 'gray';
       ctx.fillText(p.getSelectText(),80,200);
       ctx.fillStyle = 'black';
       ctx.fillText(p.getNowText(),80,200); 
     }else{
+      ctx.font = '24px JKfont';
       ctx.fillStyle = 'red';
       ctx.textAlign = 'center';
       if(this.nowTime > 0){
