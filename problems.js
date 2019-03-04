@@ -14,7 +14,7 @@ var sampleProblems = [
   {text:'あいあい',hiragana:'あいあい'},
   {text:'ﾊﾍｯ',hiragana:'はへっ'},
   {text:'対消滅',hiragana:'ついしょうめつ'},
-  {text:'おはようございナース！',hiragana:'おはようございなーす'},
+  {text:'おはようございナース！',hiragana:'おはようございなーす！'},
   {text:'えぇ！？たいらぁ！？',hiragana:'えぇ！？たいらぁ！？'},
   {text:'かわいかろ～？',hiragana:'かわいかろ～？'},
   {text:'やだ...ばかぁ',hiragana:'やだ...ばかぁ'},
