@@ -21,7 +21,7 @@ var Result = function(param){
 
     {x:20,y:420,width:500,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
     bColor:'DodgerBlue',fColor:'white',bOverColor:'DeepSkyBlue',fOverColor:'white', labelOffset:10,
-    label:'結果をツイート',
+    label:'ツツイのツイ',
     onClick:()=>{
       let url = "https://1st.natorisana.love/";
       let text = `レベル${param.level+1}で${this.finalScore}点獲得！！ (正確率:${param.accuracy.toFixed(1)}％, 速さ:${this.speed}key/s)`;
