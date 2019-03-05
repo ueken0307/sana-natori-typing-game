@@ -1,8 +1,11 @@
 var syringe = new Image();
 syringe.src = 'assets/syringe.png';
 
-var natori = new Image();
-natori.src = 'assets/natori.png';
+var normalNatori = new Image();
+normalNatori.src = 'assets/normal.png';
+
+var badNatori = new Image();
+badNatori.src = 'assets/bad.png';
 
 var clock = new Image();
 clock.src = 'assets/clock.png';

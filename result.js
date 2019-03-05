@@ -32,7 +32,7 @@ var Result = function(param){
   this.draw = function(){
     canvasReset();
 
-    ctx.drawImage(natori,0,0,natori.width,natori.height,600,80,400,400);
+    ctx.drawImage(normalNatori,0,0,normalNatori.width,normalNatori.height,600,80,400,400);
 
     ctx.font = '30px JKfont';
     ctx.textAlign = 'left';

@@ -60,10 +60,15 @@ var Select = function(param){
     this.isStart = true;
   }};
 
+  this.isOverNatori = false;
+
   this.draw = function(){
     canvasReset();
-
-    ctx.drawImage(natori,0,0,natori.width,natori.height,600,80,400,400);
+    if(this.isOverNatori){
+      ctx.drawImage(badNatori,0,0,badNatori.width,badNatori.height,600,80,400,400);
+    }else{
+      ctx.drawImage(normalNatori,0,0,normalNatori.width,normalNatori.height,600,80,400,400);
+    }
 
     ctx.font = '60px JKfont';
     ctx.textAlign = 'left';
@@ -146,6 +151,11 @@ var Select = function(param){
         }
       }
       
+      if(600 <= e.offsetX){
+        this.isOverNatori = true;
+      }else{
+        this.isOverNatori = false;
+      }
     }
   }
 }

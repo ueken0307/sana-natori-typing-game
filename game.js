@@ -46,12 +46,18 @@ var Game = function(param){
   this.missCount = 0;
   this.accuracy = 100.0;
 
+  this.isMiss = false;
+
   this.draw = function(){
     canvasReset();
     let p=this.problems[this.pCount];
     
     ctx.drawImage(syringe,0,0,syringe.width,syringe.height,2,120,996,100);
-    ctx.drawImage(natori,0,0,natori.width,natori.height,700,280,200,200);
+    if(this.isMiss){
+      ctx.drawImage(badNatori,0,0,badNatori.width,badNatori.height,650,230,250,250);
+    }else{
+      ctx.drawImage(normalNatori,0,0,normalNatori.width,normalNatori.height,650,230,250,250);
+    }
     
     ctx.font = '40px JKfont';
     ctx.textAlign = 'left';
@@ -153,6 +159,7 @@ var Game = function(param){
         if(tmpList.length != 0){
           p.sCount++;
           p.selectList[p.tCount] = tmpList;
+          this.isMiss = false;
           
           playSE(okSound);
 
@@ -193,6 +200,7 @@ var Game = function(param){
             //当てはまりなし
             this.missCount++;
             this.accuracy = ((this.keyCount - this.missCount)/this.keyCount)*100;
+            this.isMiss = true;
 
             playSE(ngSound);
           }
