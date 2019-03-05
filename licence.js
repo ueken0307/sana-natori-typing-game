@@ -19,19 +19,18 @@ var Licence = function(param){
     ctx.fillText('音声',20,100);
     ctx.font = '20px JKfont';
     ctx.fillText('SE,BGM : 魔王魂 様',30,130);
-    ctx.fillText('SE : 名取さな (@sana_natori) 様',30,160);
+    ctx.fillText('Voice : 名取さな (@sana_natori) 様',30,160);
 
     ctx.font = '40px JKfont';
     ctx.fillText('Picture',20,210);
     ctx.font = '20px JKfont';
     ctx.fillText('ICON : ICOOON MONO (TopeconHeroes) 様',30,240);
-    ctx.fillText('Picture : 名取さな (@sana_natori) 様',30,270);
 
     ctx.font = '40px JKfont';
-    ctx.fillText('Font (JKゴシックL)',20,320);
+    ctx.fillText('Font (JKゴシックL)',20,290);
     ctx.font = '20px JKfont';
-    ctx.fillText('仮名文字 : かわいいフォントと素材の箱（JK FONTS）様',30,350);
-    ctx.fillText('仮名文字以外 : M+ FONTS PROJECT 様',30,380);
+    ctx.fillText('仮名文字 : かわいいフォントと素材の箱（JK FONTS）様',30,320);
+    ctx.fillText('仮名文字以外 : M+ FONTS PROJECT 様',30,350);
     
     for(let i of this.buttons){
       ctx.font = i.font;
