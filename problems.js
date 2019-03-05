@@ -166,7 +166,7 @@ var allProblems = [
   },
   {
     text: 'やっぴ～！',
-    hiragana: 'やっぴ〜!',
+    hiragana: 'やっぴ~!',
     description: ''
   },
   {
