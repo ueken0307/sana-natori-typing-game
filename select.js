@@ -77,6 +77,9 @@ var Select = function(param){
     ctx.fillText('つよつよ',100,120);
     ctx.fillText('タイピング',200,180);
 
+    ctx.font = '20px JKfont';
+    ctx.fillText('ゲーム・絵:@zuho_cpp',380,465);
+
     if(this.isStart){
       ctx.font = '30px JKfont';
       ctx.fillText('なんいど',20,240);
