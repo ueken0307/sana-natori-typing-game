@@ -250,6 +250,501 @@ var allProblems = [
     description: ''
   },
   {
+    text: 'ヌォンタート',
+    hiragana: 'ぬぉんたーと',
+    description: ''
+  },
+  {
+    text: 'せんせえ達チョロすぎて心配になるよ名取は',
+    hiragana: 'せんせえたちちょろすぎてしんぱいになるよなとりは',
+    description: ''
+  },
+  {
+    text: 'せんせえ達すこだぞい',
+    hiragana: 'せんせえたちすこだぞい',
+    description: ''
+  },
+  {
+    text: 'きれぬい...',
+    hiragana: 'きれぬい...',
+    description: ''
+  },
+  {
+    text: 'こんな可愛い子がホモビ見るわけ無いだろ',
+    hiragana: 'こんなかわいいこがほもびみるわけないだろ',
+    description: ''
+  },
+  {
+    text: 'まろはかるてちゃんがすきなのじゃぁ',
+    hiragana: 'まろはかるてちゃんがすきなのじゃぁ',
+    description: ''
+  },
+  {
+    text: 'サナトリUUUM',
+    hiragana: 'さなとりUUUM',
+    description: ''
+  },
+  {
+    text: '辞世の句',
+    hiragana: 'じせいのく',
+    description: ''
+  },
+  {
+    text: 'BAN怯え エコーをかけて なこびさな',
+    hiragana: 'BANおびえ えこーをかけて なこびさな',
+    description: ''
+  },
+  {
+    text: '手取り足取り名取さな',
+    hiragana: 'てとりあしとりなとりさな',
+    description: ''
+  },
+  {
+    text: 'はっすたぐ',
+    hiragana: 'はっすたぐ',
+    description: ''
+  },
+  {
+    text: 'くそざこイングリッシュ',
+    hiragana: 'くそざこいんぐりっしゅ',
+    description: ''
+  },
+  {
+    text: 'アイム ナトリサナ アイ アム ナース',
+    hiragana: 'あいむ なとりさな あい あむ なーす',
+    description: ''
+  },
+  {
+    text: 'サナトリウム光線',
+    hiragana: 'さなとりうむこうせん',
+    description: ''
+  },
+  {
+    text: 'ナイチチゲール',
+    hiragana: 'ないちちげーる',
+    description: ''
+  },
+  {
+    text: '淫夢アンインストール',
+    hiragana: 'いんむあんいんすとーる',
+    description: ''
+  },
+  {
+    text: '滑舌インストール',
+    hiragana: 'かつぜついんすとーる',
+    description: ''
+  },
+  {
+    text: '2300人を地獄に落とした女',
+    hiragana: '2300にんをじごくにおとしたおんな',
+    description: ''
+  },
+  {
+    text: 'たい消滅派は賢いなぁ',
+    hiragana: 'たいしょうめつははかしこいなぁ',
+    description: ''
+  },
+  {
+    text: 'ハードバラエティ大学',
+    hiragana: 'はーどばらえてぃだいがく',
+    description: ''
+  },
+  {
+    text: '文字では最強',
+    hiragana: 'もじではさいきょう',
+    description: ''
+  },
+  {
+    text: 'きょにゅにゅにゅにゅ',
+    hiragana: 'きょにゅにゅにゅにゅ',
+    description: ''
+  },
+  {
+    text: '3窓までは許します',
+    hiragana: '3まどまではゆるします',
+    description: ''
+  },
+  {
+    text: 'インターネットミームの申し子',
+    hiragana: 'いんたーねっとみーむのもうしご',
+    description: ''
+  },
+  {
+    text: 'えーととっととー',
+    hiragana: 'えーととっととー',
+    description: ''
+  },
+  {
+    text: 'これは名取さんサイドにも問題ありというか...',
+    hiragana: 'これはなとりさんさいどにももんだいありというか...',
+    description: ''
+  },
+  {
+    text: '親のBGMより聞いたBGM',
+    hiragana: 'おやのBGMよりきいたBGM',
+    description: ''
+  },
+  {
+    text: '倒した相手にナス付けるやべーやつ',
+    hiragana: 'たおしたあいてになすつけるやべーやつ',
+    description: ''
+  },
+  {
+    text: 'さなもよう見とる',
+    hiragana: 'さなもようみとる',
+    description: ''
+  },
+  {
+    text: '綺麗な名取さな',
+    hiragana: 'きれいななとりさな',
+    description: ''
+  },
+  {
+    text: 'ヌォンタート美術館',
+    hiragana: 'ぬぉんたーとびじゅつかん',
+    description: ''
+  },
+  {
+    text: 'つるぺたすってんとん',
+    hiragana: 'つるぺたすってんとん',
+    description: ''
+  },
+  {
+    text: 'サーナ君何でも願い叶えてくれるってマ～?',
+    hiragana: '',
+    description: ''
+  },
+  {
+    text: 'パイ消滅',
+    hiragana: 'ぱいしょうめつ',
+    description: ''
+  },
+  {
+    text: '親に感謝Yoチェケラッチョ',
+    hiragana: 'おやにかんしゃYOちぇけらっちょ',
+    description: ''
+  },
+  {
+    text: '声帯サマーセール',
+    hiragana: 'せいたいさまーせーる',
+    description: ''
+  },
+  {
+    text: 'つよつよPC',
+    hiragana: 'つよつよPC',
+    description: ''
+  },
+  {
+    text: 'ふーん、結構可愛いじゃん',
+    hiragana: 'ふーん、けっこうかわいいじゃん',
+    description: ''
+  },
+  {
+    text: 'せめてうんちであれ',
+    hiragana: 'せめてうんちであれ',
+    description: ''
+  },
+  {
+    text: '胸パス',
+    hiragana: 'むねぱす',
+    description: ''
+  },
+  {
+    text: '液タブ割ったら液が出てきそう',
+    hiragana: 'えきたぶわったらえきがでてきそう',
+    description: ''
+  },
+  {
+    text: 'ググりのちから',
+    hiragana: 'ぐぐりのちから',
+    description: ''
+  },
+  {
+    text: 'こんなものにビビるやつおる？',
+    hiragana: 'こんなものにびびるやつおる？',
+    description: ''
+  },
+  {
+    text: 'ねぇこんなところに隠れられるわけないじゃん',
+    hiragana: 'ねぇこんなところにかくれられるわけないじゃん',
+    description: ''
+  },
+  {
+    text: '電気のあるところに名取あり',
+    hiragana: 'でんきのあるところになとりあり',
+    description: ''
+  },
+  {
+    text: 'ピカピカ現象',
+    hiragana: 'ぴかぴかげんしょう',
+    description: ''
+  },
+  {
+    text: '胸のボリュームぐらいの音量',
+    hiragana: 'むねのぼりゅーむぐらいのおんりょう',
+    description: ''
+  },
+  {
+    text: 'ちっさコミュ抜けるわ',
+    hiragana: 'ちっさこみゅぬけるわ',
+    description: ''
+  },
+  {
+    text: 'ブルーハワイはハワイ味',
+    hiragana: 'ぶるーはわいははわいあじ',
+    description: ''
+  },
+  {
+    text: '名取が用意したごはんが食べれないって言うんでしょ！？',
+    hiragana: 'なとりがよういしたごはんがたべれないっていうんでしょ!?',
+    description: ''
+  },
+  {
+    text: '名取と同じ、陰の者ですよ',
+    hiragana: 'なとりとおなじ、いんのものですよ',
+    description: ''
+  },
+  {
+    text: 'キレッソ！',
+    hiragana: 'きれっそ！',
+    description: ''
+  },
+  {
+    text: '脳みそクール便',
+    hiragana: 'のうみそくーるびん',
+    description: ''
+  },
+  {
+    text: '水を得たナス',
+    hiragana: 'みずをえたなす',
+    description: ''
+  },
+  {
+    text: '名取はトイレじゃないもん',
+    hiragana: 'なとりはといれじゃないもん',
+    description: ''
+  },
+  {
+    text: '背中前向いてないですよ？',
+    hiragana: 'せなかまえむいてないですよ?',
+    description: ''
+  },
+  {
+    text: 'ゆ～ちゃったっぴ',
+    hiragana: 'ゆ～ちゃったっぴ',
+    description: ''
+  },
+  {
+    text: 'バチバチにキレちゃった',
+    hiragana: 'ばちばちにきれちゃった',
+    description: ''
+  },
+  {
+    text: '電撃マオウ、9月27日発売です！',
+    hiragana: 'でんげきまおう、9がつ27にちはつばいです！',
+    description: ''
+  },
+  {
+    text: '強いお言葉を使わないでくださいまし？',
+    hiragana: 'つよいおことばをつかわないでくださいまし？',
+    description: ''
+  },
+  {
+    text: '強い言葉チケット',
+    hiragana: 'つよいことばちけっと',
+    description: ''
+  },
+  {
+    text: 'ツツイのツツイのツイのツイ',
+    hiragana: 'つついのつついのついのつい',
+    description: ''
+  },
+  {
+    text: 'Alexaにマオウを注文させる女',
+    hiragana: 'Alexaにまおうをちゅうもんさせるおんな',
+    description: ''
+  },
+  {
+    text: '可愛だろ～？',
+    hiragana: 'かわいいだろ～?',
+    description: ''
+  },
+  {
+    text: 'くぅ～美少女の弊害か～す○んこ',
+    hiragana: 'くぅ～びしょうじょのへいがいか～すまんこ',
+    description: ''
+  },
+  {
+    text: 'なんのこれしきササニシキ',
+    hiragana: 'なんのこれしきささにしき',
+    description: ''
+  },
+  {
+    text: 'アヘエビ',
+    hiragana: 'あへえび',
+    description: ''
+  },
+  {
+    text: 'ﾋﾞｮｯﾌﾞﾎﾞｯﾋﾞｭ病院で！？',
+    hiragana: 'びょっぶぼっびゅびょういんで！？',
+    description: ''
+  },
+  {
+    text: 'こんなこともうやめましょうよ',
+    hiragana: 'こんなこともうやめましょうよ',
+    description: ''
+  },
+  {
+    text: '公園デビューイキリマウント',
+    hiragana: 'こうえんでびゅーいきりまうんと',
+    description: ''
+  },
+  {
+    text: 'うんち！',
+    hiragana: 'うんち！',
+    description: ''
+  },
+  {
+    text: 'おはようございま保健委員',
+    hiragana: 'おはようございまほけんいいん',
+    description: ''
+  },
+  {
+    text: 'どエッチな書き下ろしピンナップ',
+    hiragana: 'どえっちなかきおろしぴんなっぷ',
+    description: ''
+  },
+  {
+    text: 'お前...何時まで立てこもるつもりだよ！',
+    hiragana: 'おまえ...なんじまでたてこもるつもりだよ！',
+    description: ''
+  },
+  {
+    text: 'ほい！かー！わー！いー！',
+    hiragana: 'ほい！かー！わー！いー！',
+    description: ''
+  },
+  {
+    text: '引き際が分かるナース',
+    hiragana: 'ひきぎわがわかるなーす',
+    description: ''
+  },
+  {
+    text: 'あっぷぃ！',
+    hiragana: 'あっぷぃ！',
+    description: ''
+  },
+  {
+    text: '机の下持ってきた？',
+    hiragana: 'つくえのしたもってきた？',
+    description: ''
+  },
+  {
+    text: '今日はプロまな板の名取さなさんに来ていただきました',
+    hiragana: 'きょうはぷろまないたのなとりさなさんにきていただきました',
+    description: ''
+  },
+  {
+    text: 'おはようございナースチューニング',
+    hiragana: 'おはようございなーすちゅーにんぐ',
+    description: ''
+  },
+  {
+    text: '失礼wピカチュウにキスをしてしまいましたw',
+    hiragana: 'しつれいwぴかちゅうにきすをしてしまいましたw',
+    description: ''
+  },
+  {
+    text: 'おしりいい匂いしそう～',
+    hiragana: 'おしりいいにおいしそう～',
+    description: ''
+  },
+  {
+    text: 'ぷんぷんぷにゃぷん',
+    hiragana: 'ぷんぷんぷにゃぷん',
+    description: ''
+  },
+  {
+    text: 'ズンドコズンドコぷにゃっぷ',
+    hiragana: 'ずんどこずんどこぷにゃっぷ',
+    description: ''
+  },
+  {
+    text: 'ばちこりアクセル',
+    hiragana: 'ばちこりあくせる',
+    description: ''
+  },
+  {
+    text: 'ハーバード保育園',
+    hiragana: 'はーばーどほいくえん',
+    description: ''
+  },
+  {
+    text: 'ウッ！',
+    hiragana: 'うっ！',
+    description: ''
+  },
+  {
+    text: 'バーチャルサナトリウム刑法第六条',
+    hiragana: 'ばーちゃるさなとりうむけいほうだいろくじょう',
+    description: ''
+  },
+  {
+    text: 'ないコメントシリーズ',
+    hiragana: 'ないこめんとしりーず',
+    description: ''
+  },
+  {
+    text: '名取NumLockマジで嫌い！！',
+    hiragana: 'なとりNumLockまじできらい！！',
+    description: ''
+  },
+  {
+    text: 'なんで襲ってくるの？これどうやって逃げるの？',
+    hiragana: 'なんでおそってくるの？これどうやってにげるの？',
+    description: ''
+  },
+  {
+    text: 'マルチプレイしませんか！？',
+    hiragana: 'まるちぷれいしませんか！？',
+    description: ''
+  },
+  {
+    text: '高い高い高い！',
+    hiragana: 'たかいたかいたかい！',
+    description: ''
+  },
+  {
+    text: 'やだ！那須与一！',
+    hiragana: 'やだ！なすのよいち！',
+    description: ''
+  },
+  {
+    text: '名取の布団どこに行ったの！？',
+    hiragana: 'なとりのふとんどこにいったの！？',
+    description: ''
+  },
+  {
+    text: 'ハッピバースデーふーにゃー',
+    hiragana: 'はっぴばーすでーふーにゃー',
+    description: ''
+  },
+  {
+    text: '全部はやだよ！',
+    hiragana: 'ぜんぶはやだよ！',
+    description: ''
+  },
+  {
+    text: '今朝、朝目が覚めたらなんか知らないけどクソ怒ってる野良犬がいました',
+    hiragana: 'けさ、あさめがさめたらなんかしらないけどくそおこってるのらいぬがいました',
+    description: ''
+  },
+  {
+    text: 'やんのか？',
+    hiragana: 'やんのか？',
+    description: ''
+  },
+  {
     text: 'はじめまして！名取さなです！！',
     hiragana: 'はじめまして！なとりさなです！！',
     description: ''
