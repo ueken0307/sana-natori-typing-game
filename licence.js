@@ -1,6 +1,6 @@
 var Licence = function(param){
   this.buttons = [
-    {x:400,y:420,width:200,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
+    {x:750,y:420,width:200,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
     bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white', labelOffset:10,
     label:'タイトルへ戻る',
     onClick:function(){
