@@ -1,6 +1,6 @@
 var About = function(param){
   this.buttons = [
-    {x:400,y:420,width:200,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
+    {x:750,y:420,width:200,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
     bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white', labelOffset:10,
     label:'タイトルへ戻る',
     onClick:function(){
@@ -22,17 +22,22 @@ var About = function(param){
     ctx.fillText('このゲームは同人ゲームであり、名取さな氏との直接な関係はありません。もちろん非公式です。',20,130);
 
     ctx.font = '40px JKfont';
-    ctx.fillText('How to play',10,190);
+    ctx.fillText('How to play',10,180);
     ctx.font = '20px JKfont';
-    ctx.fillText('画面上に表示される文章を時間内にどれだけ入力できるかに挑戦します。',20,220);
-    ctx.fillText('難易度は3段階で、難易度が上がるごとに1つの文章の文字数が増えます。',20,250);
-    ctx.fillText('画面上に表示されている入力方法以外でも入力できます(例:「きゃ」は kya kixya kilya のいずれも可)',20,280);
-    ctx.fillText('スコアは (最後まで入力した文章のひらがなでの文字数 × 100) × 正確率 で算出されます。',20,310);
+    ctx.fillText('画面上に表示される文章を時間内にどれだけ入力できるかに挑戦します。',20,210);
+    ctx.fillText('難易度は3段階で、難易度が上がるごとに1つの文章の文字数が増えます。',20,240);
+    ctx.fillText('画面上に表示されている入力方法以外でも入力できます(例:「きゃ」は kya kixya kilya のいずれも可)',20,270);
+    ctx.fillText('スコアは (最後まで入力した文章のひらがなでの文字数 × 100) × 正確率 で算出されます。',20,300);
 
     ctx.font = '40px JKfont';
-    ctx.fillText('Contact',10,370);
+    ctx.fillText('Contact',10,350);
     ctx.font = '20px JKfont';
-    ctx.fillText('何かあれば、Twitter : @zuho_cpp まで連絡お願いします。',20,400);
+    ctx.fillText('何かあれば、寝落ち(@zuho_cpp)まで連絡お願いします。',20,380);
+    
+    ctx.font = '40px JKfont';
+    ctx.fillText('Special Thanks',10,430);
+    ctx.font = '20px JKfont';
+    ctx.fillText('テストプレイ:冬海せんせえ(@JustM0nik4)',20,460);
     
     for(let i of this.buttons){
       ctx.font = i.font;
