@@ -2,7 +2,7 @@ var Result = function(param){
   playSERandom(resultSounds);
 
   this.finalScore = (param.score * (param.accuracy/100)).toFixed(0);
-  this.speed = ((param.keyCount - param.missCount)/90.0).toFixed(1);
+  this.speed = ((param.keyCount - param.missCount)/gameSec[param.level]).toFixed(1);
 
   this.buttons = [
     {x:20,y:300,width:500,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,

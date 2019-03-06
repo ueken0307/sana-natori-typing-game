@@ -89,7 +89,7 @@ var Game = function(param){
   }
 
   this.isActive = false;
-  this.nowTime = 90;
+  this.nowTime = gameSec[param.level];
   
   this.score = 0;
   this.keyCount = 0;
@@ -161,7 +161,7 @@ var Game = function(param){
   this.update = function(){
     if(this.isActive){
       let date = new Date();
-      this.nowTime = 90 - Math.floor((date.getTime() - this.startTime) / 1000);
+      this.nowTime = gameSec[param.level] - Math.floor((date.getTime() - this.startTime) / 1000);
 
       if(this.nowTime < 1){
         this.isActive = false;
