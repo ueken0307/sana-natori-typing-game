@@ -23,10 +23,10 @@ var Game = function(param){
     {x:20,y:300,width:610,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
     bColor:bColor = ignorePunctuation? 'red' : 'white',fColor:ignorePunctuation? 'white' : 'black',
     bOverColor:ignorePunctuation? 'white' : 'red',fOverColor:ignorePunctuation? 'black' : 'white', labelOffset:10,
-    label:ignorePunctuation? '句読点を無視する(やり直しになります)' : '句読点を無視しない(やり直しになります)',
+    label:ignorePunctuation? '句読点を無視する(変更するとやり直しになります)' : '句読点を無視しない(変更するとやり直しになります)',
     onClick:function(){
       ignorePunctuation = !ignorePunctuation;
-      this.label = ignorePunctuation? '句読点を無視する(やり直しになります)' : '句読点を無視しない(やり直しになります)';
+      this.label = ignorePunctuation? '句読点を無視する(変更するとやり直しになります)' : '句読点を無視しない(変更するとやり直しになります)';
       this.bColor = ignorePunctuation? 'red' : 'white';
       this.bOverColor = ignorePunctuation? 'white' : 'red';
       this.fColor = ignorePunctuation? 'white' : 'black';
@@ -37,10 +37,10 @@ var Game = function(param){
     {x:20,y:360,width:610,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
     bColor:bColor = ignoreSymbol? 'red' : 'white',fColor:ignoreSymbol? 'white' : 'black',
     bOverColor:ignoreSymbol? 'white' : 'red',fOverColor:ignoreSymbol? 'black' : 'white', labelOffset:10,
-    label:ignoreSymbol? '記号を無視する(やり直しになります)' : '記号を無視しない(やり直しになります)',
+    label:ignoreSymbol? '記号を無視する(変更するとやり直しになります)' : '記号を無視しない(変更するとやり直しになります)',
     onClick:function(){
       ignoreSymbol = !ignoreSymbol;
-      this.label = ignoreSymbol? '記号を無視する(やり直しになります)' : '記号を無視しない(やり直しになります)';
+      this.label = ignoreSymbol? '記号を無視する(変更するとやり直しになります)' : '記号を無視しない(変更するとやり直しになります)';
       this.bColor = ignoreSymbol? 'red' : 'white';
       this.bOverColor = ignoreSymbol? 'white' : 'red';
       this.fColor = ignoreSymbol? 'white' : 'black';
@@ -55,7 +55,10 @@ var Game = function(param){
   this.punctuationList = ['.','。',',','、'];
   
   //問題のコピー
-  let tmpProblem = problemList[param.level].slice();
+  let tmpProblem = [];
+  for(let i of problemList[param.level]){
+    tmpProblem.push({text:i.text,hiragana:i.hiragana});
+  }
   //問題のシャッフル
   for(let i=tmpProblem.length-1;i>0;--i){
     let r = Math.floor(Math.random()*(i+1));
