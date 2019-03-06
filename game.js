@@ -124,17 +124,14 @@ var Game = function(param){
   this.finish = function(){
     sm.changeScene('Result',{keyCount: this.keyCount,missCount: this.missCount,accuracy: this.accuracy,score: this.score,level:param.level});
   }
+  
+  this.ignopreList = ['F1','F2','F3','F4','F5','F6','F7','F8','F9','F10','F11','F12',
+  'Shift','Enter','Control','Alt','Backspace','Escape','Zenkaku','Hankaku','Tab','Alphanumeric','Meta','Alt','Convert','NonConvert','Hiragana','ContextMenu',
+  'Insert','Home','PageUp','Delete','End','PageDown','ArrowUp','ArrowDown','ArrowRight','ArrowLeft','ScrollLock'];
 
   this.keyPress = function(e){
-    if(this.isActive){ 
-      let allowList = ['!','?','/','.',',','-','(',')','~',"'",'"',' ','&'];
-      const isAllow = function(key){
-        for(let i of allowList){if(i == key){return true;break;}}
-        return false;
-      }
-      
-      if((48 <= e.keyCode && e.keyCode <= 57) || (65 <= e.keyCode && e.keyCode <= 90) || (97 <= e.keyCode && e.keyCode <= 122) || isAllow(e.key)){
-              
+    if(this.isActive){
+      if(this.ignopreList.find(function(element){return element == e.key})==undefined){    
         let p = this.problems[this.pCount];
         this.keyCount++;
         this.accuracy = ((this.keyCount - this.missCount)/this.keyCount)*100;
