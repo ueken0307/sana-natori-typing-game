@@ -55,7 +55,10 @@ var Game = function(param){
   this.punctuationList = ['.','。',',','、'];
   
   //問題のコピー
-  let tmpProblem = problemList[param.level].slice();
+  let tmpProblem = [];
+  for(let i of problemList[param.level]){
+    tmpProblem.push({text:i.text,hiragana:i.hiragana});
+  }
   //問題のシャッフル
   for(let i=tmpProblem.length-1;i>0;--i){
     let r = Math.floor(Math.random()*(i+1));
