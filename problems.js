@@ -281,11 +281,11 @@ var allProblems = [
   },
   {
     text: '水槽前でのんびりGW振り返り配信',
-    hiragana: 'すいそうまえでのんびりとGWふりかえりはいしん',
+    hiragana: 'すいそうまえでのんびりGWふりかえりはいしん',
     description: ''
   },
   {
-    text: '看護の日…とはいったもののただの雑談',
+    text: '看護の日...とはいったもののただの雑談',
     hiragana: 'かんごのひ...とはいったもののただのざつだん',
     description: ''
   },
