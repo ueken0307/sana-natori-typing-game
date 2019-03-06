@@ -6,21 +6,21 @@ var problemList = [
 
 var Game = function(param){
   this.buttons = [
-    {x:20,y:380,width:300,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
+    {x:20,y:420,width:300,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
     bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white', labelOffset:10,
     label:'タイトルへ戻る',
     onClick:function(){
       sm.changeScene('Select',{isStart:true});
     }},
 
-    {x:330,y:380,width:300,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
+    {x:330,y:420,width:300,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
     bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white', labelOffset:10,
     label:'やり直す',
     onClick:function(){
       sm.changeScene('Game',{level:param.level});
     }},
     
-    {x:20,y:260,width:610,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
+    {x:20,y:300,width:610,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
     bColor:bColor = ignorePunctuation? 'red' : 'white',fColor:ignorePunctuation? 'white' : 'black',
     bOverColor:ignorePunctuation? 'white' : 'red',fOverColor:ignorePunctuation? 'black' : 'white', labelOffset:10,
     label:ignorePunctuation? '句読点を無視する(やり直しになります)' : '句読点を無視しない(やり直しになります)',
@@ -34,7 +34,7 @@ var Game = function(param){
       sm.changeScene('Game',{level:param.level});
     }},
     
-    {x:20,y:320,width:610,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
+    {x:20,y:360,width:610,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
     bColor:bColor = ignoreSymbol? 'red' : 'white',fColor:ignoreSymbol? 'white' : 'black',
     bOverColor:ignoreSymbol? 'white' : 'red',fOverColor:ignoreSymbol? 'black' : 'white', labelOffset:10,
     label:ignoreSymbol? '記号を無視する(やり直しになります)' : '記号を無視しない(やり直しになります)',
@@ -104,9 +104,9 @@ var Game = function(param){
     
     ctx.drawImage(syringe,0,0,syringe.width,syringe.height,2,120,996,100);
     if(this.isMiss){
-      ctx.drawImage(badNatori,0,0,badNatori.width,badNatori.height,650,230,250,250);
+      ctx.drawImage(badNatori,0,0,badNatori.width,badNatori.height,700,230,250,250);
     }else{
-      ctx.drawImage(normalNatori,0,0,normalNatori.width,normalNatori.height,650,230,250,250);
+      ctx.drawImage(normalNatori,0,0,normalNatori.width,normalNatori.height,700,230,250,250);
     }
     
     ctx.font = '40px JKfont';
