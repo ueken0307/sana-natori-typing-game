@@ -19,10 +19,40 @@ var Game = function(param){
     onClick:function(){
       sm.changeScene('Game',{level:param.level});
     }},
+    
+    {x:20,y:260,width:610,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
+    bColor:bColor = ignorePunctuation? 'red' : 'white',fColor:ignorePunctuation? 'white' : 'black',
+    bOverColor:ignorePunctuation? 'white' : 'red',fOverColor:ignorePunctuation? 'black' : 'white', labelOffset:10,
+    label:ignorePunctuation? '句読点を無視する(やり直しになります)' : '句読点を無視しない(やり直しになります)',
+    onClick:function(){
+      ignorePunctuation = !ignorePunctuation;
+      this.label = ignorePunctuation? '句読点を無視する(やり直しになります)' : '句読点を無視しない(やり直しになります)';
+      this.bColor = ignorePunctuation? 'red' : 'white';
+      this.bOverColor = ignorePunctuation? 'white' : 'red';
+      this.fColor = ignorePunctuation? 'white' : 'black';
+      this.fOverColor = ignorePunctuation? 'black' : 'white';
+      sm.changeScene('Game',{level:param.level});
+    }},
+    
+    {x:20,y:320,width:610,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
+    bColor:bColor = ignoreSymbol? 'red' : 'white',fColor:ignoreSymbol? 'white' : 'black',
+    bOverColor:ignoreSymbol? 'white' : 'red',fOverColor:ignoreSymbol? 'black' : 'white', labelOffset:10,
+    label:ignoreSymbol? '記号を無視する(やり直しになります)' : '記号を無視しない(やり直しになります)',
+    onClick:function(){
+      ignoreSymbol = !ignoreSymbol;
+      this.label = ignoreSymbol? '記号を無視する(やり直しになります)' : '記号を無視しない(やり直しになります)';
+      this.bColor = ignoreSymbol? 'red' : 'white';
+      this.bOverColor = ignoreSymbol? 'white' : 'red';
+      this.fColor = ignoreSymbol? 'white' : 'black';
+      this.fOverColor = ignoreSymbol? 'black' : 'white';
+      sm.changeScene('Game',{level:param.level});
+    }},
   ];
 
   this.problems = [];
   this.pCount = 0;
+  this.symbolList = ['!','！','?','？','(','（',')','）','/','／',,'"','”',"’",'&','＆','【','】'];
+  this.punctuationList = ['.','。',',','、'];
   
   //問題のコピー
   let tmpProblem = problemList[param.level].slice();
@@ -31,10 +61,30 @@ var Game = function(param){
     let r = Math.floor(Math.random()*(i+1));
     let tmp = tmpProblem[i];
     tmpProblem[i] = tmpProblem[r];
-    tmpProblem[r] = tmp; 
+    tmpProblem[r] = tmp;
   }
   //問題の代入
   for(let i=0;i<tmpProblem.length;++i){
+    if(ignorePunctuation){
+      for(let j of this.punctuationList){
+        while(tmpProblem[i].text != tmpProblem[i].text.replace(j,'')){
+          tmpProblem[i].text = tmpProblem[i].text.replace(j,''); 
+        }
+        while(tmpProblem[i].hiragana != tmpProblem[i].hiragana.replace(j,'')){
+          tmpProblem[i].hiragana = tmpProblem[i].hiragana.replace(j,''); 
+        }
+      }
+    }
+    if(ignoreSymbol){
+      for(let j of this.symbolList){
+        while(tmpProblem[i].text != tmpProblem[i].text.replace(j,'')){
+          tmpProblem[i].text = tmpProblem[i].text.replace(j,''); 
+        }
+        while(tmpProblem[i].hiragana != tmpProblem[i].hiragana.replace(j,'')){
+          tmpProblem[i].hiragana = tmpProblem[i].hiragana.replace(j,''); 
+        }
+      }
+    }
     this.problems.push(new Problem(tmpProblem[i].text,tmpProblem[i].hiragana));
   }
 
