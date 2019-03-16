@@ -37,6 +37,11 @@ var Problem = function(text,hiragana){
   }
 }
 
+function isSmall(c){
+  return c == 'ぁ' || c == 'ぃ' || c == 'ぅ' || c == 'ぇ' || c == 'ぉ' ||
+  c == 'ゃ' || c == 'ゅ' || c == 'ょ'; 
+}
+
 function convert2Alphabet(str){
   let result = [];
   
@@ -49,9 +54,7 @@ function convert2Alphabet(str){
       }
     };
     
-    if(i+1<str.length &&
-       (str[i+1] == 'ぁ' || str[i+1] == 'ぃ' || str[i+1] == 'ぅ' || str[i+1] == 'ぇ' || str[i+1] == 'ぉ' ||
-        str[i+1] == 'ゃ' || str[i+1] == 'ゅ' || str[i+1] == 'ょ')){
+    if(i+1<str.length && !isSmall(str[i]) && isSmall(str[i+1])){
       if(table[s+str[i+1]] != undefined){
         p(table[s+str[i+1]]);
       }
