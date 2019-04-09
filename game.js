@@ -127,18 +127,22 @@ var Game = function(param){
     
     if(this.isActive){
       ctx.textAlign = 'left';  
-      
+
+      ctx.font = '18px JKfont';
+      ctx.fillStyle = 'gray';
+      ctx.fillText(p.textH,80,140);
+
       ctx.font = '24px JKfont';
       ctx.font = (ctx.measureText(p.text).width > 800)? '18px JKfont':'24px JKfont';
       ctx.fillStyle = 'black';
-      ctx.fillText(p.text,80,160);
+      ctx.fillText(p.text,80,170);
       
       ctx.font = '24px JKfont';
       ctx.font = (ctx.measureText(p.getSelectText()).width > 800)? '18px JKfont':'24px JKfont';
       ctx.fillStyle = 'gray';
-      ctx.fillText(p.getSelectText(),80,200);
+      ctx.fillText(p.getSelectText(),80,205);
       ctx.fillStyle = 'black';
-      ctx.fillText(p.getNowText(),80,200); 
+      ctx.fillText(p.getNowText(),80,205);
     }else{
       ctx.font = '24px JKfont';
       ctx.fillStyle = 'red';
