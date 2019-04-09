@@ -421,7 +421,7 @@ var allProblems = [
   },
   {
     text: '親に感謝Yoチェケラッチョ',
-    hiragana: 'おやにかんしゃYOちぇけらっちょ',
+    hiragana: 'おやにかんしゃYoちぇけらっちょ',
     description: ''
   },
   {
