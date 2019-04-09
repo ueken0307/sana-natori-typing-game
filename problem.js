@@ -66,7 +66,8 @@ function convert2Alphabet(str){
       }
       i++;
     }else if(s=='ん'){
-      if(i+1<str.length && str[i+1]!='ん' && str[i+1]!='な' && str[i+1]!='に' && str[i+1]!='ぬ' && str[i+1]!='ね' && str[i+1]!='の'){
+      if(i+1<str.length && str[i+1]!='ん' && str[i+1]!='な' && str[i+1]!='に' && str[i+1]!='ぬ' && str[i+1]!='ね' && str[i+1]!='の' &&
+        str[i+1]!='あ' && str[i+1]!='い' && str[i+1]!='う' && str[i+1]!='え' && str[i+1]!='お'){
         tmp.push('n');
       }
       p(table[s]);
