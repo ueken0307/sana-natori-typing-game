@@ -411,7 +411,7 @@ var allProblems = [
   },
   {
     text: 'サーナ君何でも願い叶えてくれるってマ～?',
-    hiragana: '',
+    hiragana: 'さーなくんなんでもねがいかなえてくれるってま〜?',
     description: ''
   },
   {
