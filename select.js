@@ -1,24 +1,31 @@
 var Select = function(param){
   this.buttons = [
-    {x:20,y:260,width:500,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
+    {x:20,y:200,width:500,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
     bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white', labelOffset:10,
     label:'Lv1：幼少時代お絵描きBBS名取さな',
     onClick:function(){
       sm.changeScene('Game',{level:0});
     }},
 
-    {x:20,y:320,width:500,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
+    {x:20,y:260,width:500,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
     bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white', labelOffset:10,
     label:'Lv2：17歳ばーちゃるなーす名取さな',
     onClick:function(){
       sm.changeScene('Game',{level:1});
     }},
 
-    {x:20,y:380,width:500,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
+    {x:20,y:320,width:500,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
     bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white', labelOffset:10,
     label:'Lv3：インターネット老人会名取さな',
     onClick:function(){
       sm.changeScene('Game',{level:2});
+    }},
+
+    {x:20,y:380,width:500,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
+    bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white', labelOffset:10,
+    label:'Lv4 (?)：にほんごつよつよ名取さな',
+    onClick:function(){
+      sm.changeScene('Game',{level:3});
     }},
 
     {x:20,y:440,width:70,height:30,font:'14px JKfont',textAlign:'center',mouseOver:0,
@@ -82,7 +89,7 @@ var Select = function(param){
 
     if(this.isStart){
       ctx.font = '30px JKfont';
-      ctx.fillText('なんいど',20,240);
+      ctx.fillText('なんいど',20,185);
 
       for(let i of this.buttons){
         ctx.font = i.font;

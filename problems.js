@@ -1041,16 +1041,30 @@ var countChar = function(p){
 var level1;
 var level2;
 var level3;
+var jpOnly;
+
+var isJpOnly = function(str){
+  const ignoreList = ['!','！','?','？','(','（',')','）','/','／','~','～','"','”',"'","’",'&','＆',
+                      '0','1','2','3','4','5','6','7','8','9'];
+  for(let i of ignoreList){
+    if(str.includes(i)) return false;
+  }
+  return true;
+}
 
 //問題をレベルごとにわける
 var splitProbrem = function(p){
   level1 = [];
   level2 = [];
   level3 = [];
+  jpOnly = [];
 
   splitLength = [8,16];
    for(let i of p){
      if(i.hiragana.length != 0){
+      if(isJpOnly(i.hiragana)){
+        jpOnly.push(i);
+      }
       if(i.hiragana.length <= splitLength[0]){
         level1.push(i);
       }else if(i.hiragana.length <= splitLength[1]){
