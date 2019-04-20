@@ -756,7 +756,7 @@ var allProblems = [
   },
   {
     text: 'さな、誰も傷つけません！',
-    hiragana: 'さな、だれもきずつけません',
+    hiragana: 'さな、だれもきずつけません!',
     description: ''
   },
   {
@@ -901,7 +901,7 @@ var allProblems = [
   },
   {
     text: 'さな、悲鳴欲張りセットと無言の大人買い。',
-    hiragana: 'さな、ひめいよくばりせっととむごんのおとながい',
+    hiragana: 'さな、ひめいよくばりせっととむごんのおとながい.',
     description: ''
   },
   {
