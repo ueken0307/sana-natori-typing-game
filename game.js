@@ -1,7 +1,8 @@
 var problemList = [
   level1,
   level2,
-  level3
+  level3,
+  jpOnly
 ];
 
 var Game = function(param){
