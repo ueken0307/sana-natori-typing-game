@@ -8,6 +8,7 @@
 このゲームは[名取さな(@sana_natori)](https://twitter.com/sana_natori)氏の生放送、動画、ツイートなどを問題にしたタイピングゲームです。    
 [名取さな1周年記念サイト](https://1st.natorisana.love/)用のゲームとして作成しました。  
 **このゲームは同人ゲームであり、名取さな氏との直接な関係はありません。もちろん非公式です。**    
+[ここ](https://ueken0307.github.io/natori-typing/)で遊べます。  
   
 
 
