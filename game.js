@@ -16,7 +16,7 @@ var Game = function(param){
 
     {x:330,y:420,width:300,height:50,font:'24px JKfont',textAlign:'center',mouseOver:0,
     bColor:'white',fColor:'black',bOverColor:'red',fOverColor:'white', labelOffset:10,
-    label:'やり直す',
+    label:'やり直す(Esc)',
     onClick:function(){
       sm.changeScene('Game',{level:param.level});
     }},
@@ -189,6 +189,11 @@ var Game = function(param){
 
   this.keyPress = function(e){
     if(this.isActive){
+      //リトライ
+      if(e.key == 'Escape'){
+        sm.changeScene('Game',{level:param.level});
+      }
+
       if(this.ignopreList.find(function(element){return element == e.key})==undefined){    
         let p = this.problems[this.pCount];
         this.keyCount++;
